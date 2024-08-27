@@ -1,5 +1,5 @@
 # ROSProtoLinker
-通过利用模板编程中的 C++ SFINAE，我修改了 roscpp_serialization 和 roscpp_traits。这使得 ROSProtoLinker 可以无缝支持 ROS 原生消息和 Protobuf 消息，增强了其兼容性和可扩展性。我是在dorcker中跑的这个代码，如果不使用dorcker也是可以的，你的操作系统需要安装protobuff和ros 20.04，就可以去跑一下我的代码。不过需要注意，我的cmakelist.txt会把message_serialization和message_traits复制到操作系统的ros原本的文本中，这样做我是为了跑一次就可以内置使用protobuff.
+通过利用模板编程中的 C++ SFINAE，我修改了 roscpp_serialization 和 roscpp_traits。这使得 ROSProtoLinker 可以无缝支持 ROS 原生消息和 Protobuf 消息，增强了其兼容性和可扩展性。我是在dorcker中跑的这个代码，如果不使用dorcker也是可以的，你的操作系统需要安装protobuff和ros 20.04，就可以去跑一下我的代码。不过需要注意，我的cmakelist.txt会把message_serialization和message_traits复制到操作系统的ros原本的代码中，这样做我是为了跑一次就可以内置使用protobuff.如果你不需要这样，建议你看一下我都cmakelist.txt文件，并把这部分给注释掉
 
 ![这个是如何在ros接入proto的一个过程](https://github.com/xiaohuarun/ROSProtoLinker/blob/main/image/ROSProtoLinker.png)
 
