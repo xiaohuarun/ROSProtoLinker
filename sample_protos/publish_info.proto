@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package testpb.sample;
+
+message PublishInfo {
+    string name= 1;
+    string message_type = 2;
+    string publish_msg = 3;
+
+}
